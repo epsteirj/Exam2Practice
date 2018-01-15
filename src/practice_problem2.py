@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Ryan Epstein.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -30,7 +30,7 @@ import simple_testing as st
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem2a()
+    #run_test_practice_problem2a()
     run_test_practice_problem2b()
 
 
@@ -57,7 +57,13 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
 
 
-def practice_problem2a(sequence, delta):
+    numbers=[2,10,5,-20,8]
+    expected=[8,16,11,-14,14]
+    answer=practice_problem2a(numbers,6)
+    print(expected)
+    print(answer)
+
+def practice_problem2a(sequence, delta,):
     """
     What comes in:
       -- A sequence of integers, e.g. ([2, 10, 5, -20, 8])
@@ -83,7 +89,11 @@ def practice_problem2a(sequence, delta):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
-
+    sequence2=[]
+    for k in range(len(sequence)):
+        x=sequence[k]+delta
+        sequence2=sequence2+x
+    return sequence2
 
 def run_test_practice_problem2b():
     """ Tests the   practice_problem2b  function. """
@@ -177,8 +187,12 @@ def practice_problem2b(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
-
-
+    s=''
+    for k in range(len(sequence)):
+        word=sequence[k]
+        x=word[0]
+        s=s+x
+    return s
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
