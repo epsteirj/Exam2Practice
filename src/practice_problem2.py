@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -60,6 +60,24 @@ def run_test_practice_problem2a():
     numbers=[2,10,5,-20,8]
     expected=[8,16,11,-14,14]
     answer=practice_problem2a(numbers,6)
+    print(expected)
+    print(answer)
+
+    numbers = [9, 4, 13, -100, -9]
+    expected = [13, 8, 17, -96, -5]
+    answer = practice_problem2a(numbers, 4)
+    print(expected)
+    print(answer)
+
+    numbers = [-1, 1, -1, 1, -1]
+    expected = [5, 7, 5, 7, 5]
+    answer = practice_problem2a(numbers, 6)
+    print(expected)
+    print(answer)
+
+    numbers = [5, 9, 4, 7, 88]
+    expected = [2, 6, 1, 4, 85]
+    answer = practice_problem2a(numbers, -3)
     print(expected)
     print(answer)
 
@@ -82,7 +100,7 @@ def practice_problem2a(sequence, delta,):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -92,7 +110,7 @@ def practice_problem2a(sequence, delta,):
     sequence2=[]
     for k in range(len(sequence)):
         x=sequence[k]+delta
-        sequence2=sequence2+x
+        sequence2=sequence2+[x]
     return sequence2
 
 def run_test_practice_problem2b():
@@ -180,7 +198,7 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -190,8 +208,9 @@ def practice_problem2b(sequence):
     s=''
     for k in range(len(sequence)):
         word=sequence[k]
-        x=word[0]
-        s=s+x
+        if len(word)>0:
+            x=word[0]
+            s=s+x
     return s
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
